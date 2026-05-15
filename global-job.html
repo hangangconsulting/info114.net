@@ -22,7 +22,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=1778824738841">
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -236,7 +236,10 @@
                     <li><a href="invest-guide.html">FDI GUIDE</a></li>
                     <li><a href="support.html">Q&A</a></li>
                 </ul>
-                <a href="#contact" class="cta-button">Consult Now</a>
+                <div class="nav-actions">
+                    <a href="#contact" class="cta-button">Consult Now</a>
+                    <div id="google_translate_element"></div>
+                </div>
             </nav>
         </div>
     </header>
@@ -343,5 +346,18 @@
             </div>
         </div>
     </footer>
+
+    <!-- Google Translate Script -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'ko',
+                includedLanguages: 'zh-CN,en,fr,ja,ru,es,th,uz,vi',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>

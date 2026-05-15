@@ -1348,6 +1348,70 @@ footer {
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
 }
 
+/* --- Nav Actions & Google Translate Premium --- */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-shrink: 0;
+}
+
+#google_translate_element {
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
+    height: 38px;
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+    transition: var(--transition);
+    overflow: hidden;
+}
+
+#google_translate_element:hover {
+    border-color: var(--accent);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.goog-te-gadget {
+    font-family: var(--font-body) !important;
+    color: transparent !important;
+    font-size: 0 !important;
+}
+
+.goog-te-gadget .goog-te-combo {
+    font-family: var(--font-body) !important;
+    font-size: 0.85rem !important;
+    color: var(--white) !important;
+    background-color: transparent !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    padding: 5px !important;
+    border-radius: 4px !important;
+    cursor: pointer !important;
+}
+
+.goog-te-gadget .goog-te-combo:hover {
+    border-color: var(--accent) !important;
+}
+
+/* Hide Google Branding completely */
+.goog-te-gadget > span > a {
+    display: none !important;
+}
+.goog-te-gadget img {
+    display: none !important;
+}
+.goog-logo-link {
+    display: none !important;
+}
+.goog-te-banner-frame {
+    display: none !important;
+}
+body {
+    top: 0 !important;
+}
+
+
 .design-toggle-title {
     font-family: var(--font-body);
     font-size: 0.85rem;

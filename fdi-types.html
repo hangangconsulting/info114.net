@@ -18,7 +18,7 @@
     <link rel="canonical" href="https://www.info114.com/fdi-types.html">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=1778824738840">
     <style>
         body { background-color: var(--primary); color: var(--white); font-family: 'Inter', sans-serif; }
         .subpage-header { padding: 150px 0 80px; background: linear-gradient(rgba(5,11,20,0.8), rgba(5,11,20,0.9)), url('assets/gwanghwamun_clean.png') center/cover; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05); }
@@ -40,7 +40,10 @@
                     <li><a href="index.html">HOME</a></li>
                     <li><a href="invest-guide.html" class="active">FDI GUIDE</a></li>
                 </ul>
-                <a href="index.html#contact" class="cta-button">Consult Now</a>
+                <div class="nav-actions">
+                    <a href="index.html#contact" class="cta-button">Consult Now</a>
+                    <div id="google_translate_element"></div>
+                </div>
             </nav>
         </div>
     </header>
@@ -83,5 +86,18 @@
             <a href="invest-guide.html" class="cta-button" style="background: transparent; border: 2px solid var(--accent); color: var(--accent);">뒤로 가기</a>
         </div>
     </div>
+
+    <!-- Google Translate Script -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'ko',
+                includedLanguages: 'zh-CN,en,fr,ja,ru,es,th,uz,vi',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
