@@ -112,6 +112,11 @@ header {
     -webkit-backdrop-filter: none;
 }
 
+header .container {
+    max-width: 100%;
+    padding: 0 3rem;
+}
+
 header.scrolled {
     background: rgba(5, 11, 20, 0.5); /* Extremely lightweight, highly transparent dark background */
     padding: 1rem 0;
