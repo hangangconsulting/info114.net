@@ -1341,14 +1341,14 @@ footer {
     flex-direction: column;
     gap: 8px;
     transition: var(--transition);
-}
-
 .design-toggle-container:hover {
     border-color: var(--accent);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
 }
 
-/* --- Nav Actions & Google Translate Premium --- */
+}
+
+/* --- Nav Actions & Custom Translate Premium --- */
 .nav-actions {
     display: flex;
     align-items: center;
@@ -1356,21 +1356,46 @@ footer {
     flex-shrink: 0;
 }
 
-#google_translate_element {
-    border-radius: 4px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    background: rgba(255, 255, 255, 0.05);
-    height: 38px;
+/* --- Custom Translate Select --- */
+.custom-translate {
+    position: relative;
     display: flex;
     align-items: center;
-    padding: 0 5px;
-    transition: var(--transition);
-    overflow: hidden;
 }
 
-#google_translate_element:hover {
+#custom_lang_select {
+    appearance: none;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--white);
+    padding: 8px 30px 8px 15px;
+    border-radius: 4px;
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: var(--transition);
+    outline: none;
+}
+
+#custom_lang_select:hover, #custom_lang_select:focus {
     border-color: var(--accent);
     background: rgba(255, 255, 255, 0.1);
+}
+
+#custom_lang_select option {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.custom-translate::after {
+    content: '\f107';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    right: 10px;
+    color: var(--white);
+    font-size: 0.8rem;
+    pointer-events: none;
 }
 
 .goog-te-gadget {

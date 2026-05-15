@@ -25,7 +25,7 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css?v=1778824738842">
+    <link rel="stylesheet" href="style.css?v=2026051515">
 </head>
 
 <body>
@@ -50,8 +50,23 @@
                     <li><a href="#contact">CONTACT</a></li>
                 </ul>
                 <div class="nav-actions">
+                    <div class="custom-translate">
+                        <select id="custom_lang_select" onchange="changeLanguage(this.value)">
+                            <option value="">🌐 Language</option>
+                            <option value="ko">한국어 (Korean)</option>
+                            <option value="en">English</option>
+                            <option value="zh-CN">中文 (Chinese)</option>
+                            <option value="ja">日本語 (Japanese)</option>
+                            <option value="vi">Tiếng Việt (Vietnamese)</option>
+                            <option value="ru">Русский (Russian)</option>
+                            <option value="th">ไทย (Thai)</option>
+                            <option value="es">Español (Spanish)</option>
+                            <option value="fr">Français (French)</option>
+                            <option value="uz">O'zbek (Uzbek)</option>
+                        </select>
+                    </div>
                     <a href="#contact" class="cta-button">Consult Now</a>
-                    <div id="google_translate_element"></div>
+                    <div id="google_translate_element" style="display:none;"></div>
                 </div>
                 <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation">
                     <span></span>
@@ -346,11 +361,32 @@
     <script src="script.js"></script>
     <!-- Google Translate Script -->
     <script type="text/javascript">
+        function changeLanguage(lang) {
+            if (lang) {
+                document.cookie = "googtrans=/ko/" + lang + "; path=/;";
+                document.cookie = "googtrans=/ko/" + lang + "; path=/; domain=" + document.domain + ";";
+            } else {
+                document.cookie = "googtrans=; path=/; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
+                document.cookie = "googtrans=; path=/; domain=" + document.domain + "; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
+            }
+            window.location.reload();
+        }
+
+        // Set the select box to the currently selected language
+        window.addEventListener('DOMContentLoaded', function() {
+            var match = document.cookie.match(/(?:^|;)\s*googtrans=([^;]*)/);
+            if (match) {
+                var parts = match[1].split('/');
+                if (parts.length === 3) {
+                    var select = document.getElementById('custom_lang_select');
+                    if (select) select.value = parts[2];
+                }
+            }
+        });
+
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({
                 pageLanguage: 'ko',
-                includedLanguages: 'zh-CN,en,fr,ja,ru,es,th,uz,vi',
-                
                 autoDisplay: false
             }, 'google_translate_element');
         }
