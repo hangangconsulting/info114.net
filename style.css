@@ -124,9 +124,7 @@ header.scrolled {
 
 nav {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    gap: 1.2rem;
     width: 100%;
 }
 
@@ -157,11 +155,11 @@ nav {
 
 .nav-links {
     display: flex;
-    gap: 0.8rem;
+    gap: 1.2rem;
     list-style: none;
     align-items: center;
     justify-content: center;
-    flex: 1;
+    margin: 0 auto;
 }
 
 .nav-links a {
